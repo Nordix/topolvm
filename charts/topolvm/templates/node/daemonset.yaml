@@ -243,7 +243,7 @@ spec:
         - name: lvmd-socket-dir
           hostPath:
             path: {{ dir .Values.node.lvmdSocket }}
-            type: Directory
+            type: DirectoryOrCreate
         {{- end }}
         {{- end }}
         {{- with .Values.node.additionalVolumes }}
